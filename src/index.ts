@@ -22,12 +22,12 @@ const NILAI_LULUS: number = 55; // Batas minimal nilai akhir agar dinyatakan lul
 
 // Array penyimpanan data di memori, sudah diisi 6 data awal (seed)
 const daftarMahasiswa: Mahasiswa[] = [
-  { nim: "263140707111001", nama: "Budi Santoso", jurusan: "Teknik Informatika", nilaiTugas: 80, nilaiUTS: 75, nilaiUAS: 85 },
-  { nim: "263140707111002", nama: "Siti Aminah", jurusan: "Sistem Informasi", nilaiTugas: 90, nilaiUTS: 88, nilaiUAS: 92 },
-  { nim: "263140707111003", nama: "Andi Wijaya", jurusan: "Teknik Informatika", nilaiTugas: 60, nilaiUTS: 55, nilaiUAS: 50 },
-  { nim: "263140707111004", nama: "Dewi Lestari", jurusan: "Manajemen Bisnis", nilaiTugas: 72, nilaiUTS: 68, nilaiUAS: 75 },
-  { nim: "263140707111005", nama: "Rizky Pratama", jurusan: "Sistem Informasi", nilaiTugas: 45, nilaiUTS: 40, nilaiUAS: 38 },
-  { nim: "263140707111006", nama: "Nadia Putri", jurusan: "Manajemen Bisnis", nilaiTugas: 85, nilaiUTS: 80, nilaiUAS: 78 },
+  { nim: "263140707111001", nama: "Rana Shafa", jurusan: "Teknik Informatika", nilaiTugas: 80, nilaiUTS: 75, nilaiUAS: 85 },
+  { nim: "263140707111002", nama: "Danillo Junio", jurusan: "Sistem Informasi", nilaiTugas: 90, nilaiUTS: 88, nilaiUAS: 92 },
+  { nim: "263140707111003", nama: "Nadeen Shakilla", jurusan: "Teknik Informatika", nilaiTugas: 60, nilaiUTS: 55, nilaiUAS: 50 },
+  { nim: "263140707111004", nama: "CandraSenna", jurusan: "Manajemen Bisnis", nilaiTugas: 72, nilaiUTS: 68, nilaiUAS: 75 },
+  { nim: "263140707111005", nama: "Annisa Hadroh", jurusan: "Sistem Informasi", nilaiTugas: 45, nilaiUTS: 40, nilaiUAS: 38 },
+  { nim: "263140707111006", nama: "Salsa Hadrohhh", jurusan: "Manajemen Bisnis", nilaiTugas: 85, nilaiUTS: 80, nilaiUAS: 78 },
 ];
 
 // ============================================================

@@ -151,3 +151,41 @@ function inputNimBaru(): string {
   }
   return nim; // Kembalikan NIM yang valid
 }
+// ============================================================
+// BAGIAN 3: CREATE (TAMBAH DATA)
+// ============================================================
+
+// Fungsi untuk menambah data mahasiswa baru (tanpa return / void)
+function tambahMahasiswa(): void {
+  console.log("\n--- Tambah Mahasiswa ---");
+  const nim: string = inputNimBaru(); // Minta NIM yang unik dan valid
+  const nama: string = inputTeks("Nama"); // Minta nama (tidak boleh kosong)
+  const jurusan: string = inputTeks("Jurusan"); // Minta jurusan (tidak boleh kosong)
+  const nilaiTugas: number = inputNilai("Nilai Tugas"); // Minta nilai tugas
+  const nilaiUTS: number = inputNilai("Nilai UTS"); // Minta nilai UTS
+  const nilaiUAS: number = inputNilai("Nilai UAS"); // Minta nilai UAS
+  // Menambahkan data baru ke akhir array dengan push
+  daftarMahasiswa.push({ nim, nama, jurusan, nilaiTugas, nilaiUTS, nilaiUAS });
+  console.log("Data berhasil ditambahkan.");
+}
+
+// ============================================================
+// BAGIAN 4: READ (TAMPIL DATA)
+// ============================================================
+
+// Fungsi tanpa parameter untuk mencetak judul kolom tabel
+function cetakHeader(): void {
+  console.log(buatGaris(86)); // Garis atas tabel
+  // Judul kolom, dirapikan dengan padEnd agar sejajar
+  console.log("No".padEnd(4) + "NIM".padEnd(17) + "Nama".padEnd(18) + "Jurusan".padEnd(20) + "T/UTS/UAS".padEnd(14) + "Akhir".padEnd(8) + "Grade");
+  console.log(buatGaris(86)); // Garis bawah judul
+}
+
+// Fungsi untuk mencetak satu baris data mahasiswa
+function cetakBaris(m: Mahasiswa, no: number): void {
+  const akhir: number = hitungNilaiAkhir(m); // Hitung nilai akhir
+  const grade: string = tentukanGrade(akhir); // Tentukan grade-nya
+  const nilaiGabung: string = `${m.nilaiTugas}/${m.nilaiUTS}/${m.nilaiUAS}`; // Gabungkan 3 nilai
+  // Cetak satu baris dengan lebar kolom yang tetap
+  console.log(String(no).padEnd(4) + m.nim.padEnd(17) + m.nama.padEnd(18) + m.jurusan.padEnd(20) + nilaiGabung.padEnd(14) + formatNilai(akhir).padEnd(8) + grade);
+}
